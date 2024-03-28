@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2024 Junde Yhi <junde@yhi.moe> -->
-<component type="runtime">
+<component type="addon">
   <id>org.freedesktop.Sdk.Extension.gnat13</id>
   <extends>org.freedesktop.Sdk</extends>
   <name>GNAT 13</name>
@@ -17,7 +17,9 @@
   <categories>
     <category>Development</category>
   </categories>
-  <developer_name>Ada Library Repository</developer_name>
+  <developer id="dev.ada.alire">
+    <name>Ada Library Repository</name>
+  </developer>
   <url type="homepage">https://www.gnu.org/software/gnat</url>
   <url type="help">https://gcc.gnu.org/onlinedocs/gcc-13.2.0/gnat_ugn</url>
   <metadata_license>CC0-1.0</metadata_license>
