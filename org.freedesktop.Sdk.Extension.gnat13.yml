@@ -40,8 +40,8 @@ modules:
       - cp -R * /usr/lib/sdk/gnat13
     sources:
       - type: archive
-        url: https://github.com/alire-project/GNAT-FSF-builds/releases/download/gprbuild-22.0.0-1/gprbuild-x86_64-linux-22.0.0-1.tar.gz
-        sha256: 24dfc1b54655edd4f85589e7e7dbd0bee24d087f25d5b0f13d3224fe7acf85b8
+        url: https://github.com/alire-project/GNAT-FSF-builds/releases/download/gprbuild-24.0.0-1/gprbuild-x86_64-linux-24.0.0-1.tar.gz
+        sha256: 4bb020f375a90bdec348390c44e517af42d2724fb439b00c4738992c42a931c6
 
   - name: alire
     only-arches:
@@ -49,13 +49,10 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm755 -t /usr/lib/sdk/gnat13/bin alr
-    post-install:
-      # Stop Alire from interactively asking for a selection of toolchain.
-      - /usr/lib/sdk/gnat13/bin/alr toolchain --disable-assistant
     sources:
       - type: archive
-        url: https://github.com/alire-project/alire/releases/download/v1.2.2/alr-1.2.2-bin-x86_64-linux.zip
-        sha256: a78ee8ff6b8c82d39d458aa75753ed3a74d53111149b8f9435d4dcac1093c3d6
+        url: https://github.com/alire-project/alire/releases/download/v2.0.1/alr-2.0.1-bin-x86_64-linux.zip
+        sha256: 8f4b39f42fd6969815077f91fdae087b8309eedda069ad5227374c49807792a1
 
   - name: enable-sh
     buildsystem: simple
@@ -65,7 +62,10 @@ modules:
       - type: script
         dest-filename: enable.sh
         commands:
-          - export PATH="$PATH:/usr/lib/sdk/gnat13/bin"
+          # Stop Alire from interactively asking for a selection of toolchain. Do this in the
+          # runtime, as the configuration file (~/.config/alire/settings.toml) wouldn't be packaged.
+          - /usr/lib/sdk/gnat13/bin/alr toolchain --disable-assistant > /dev/null
+          - export PATH="/usr/lib/sdk/gnat13/bin:$PATH"
 
   - name: metadata
     buildsystem: simple

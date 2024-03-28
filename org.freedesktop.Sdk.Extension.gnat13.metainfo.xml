@@ -11,7 +11,7 @@
       <li>GNAT (Ada) compiler</li>
       <li>GNATprove (SPARK) analyzer</li>
       <li>GPRbuild build system</li>
-      <li>Alire (<code>alr</code>) package manager</li>
+      <li>Alire (alr) package manager</li>
     </ul>
   </description>
   <categories>
@@ -23,6 +23,16 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <releases>
+    <release version="13.2.0-1+flatpak.2.0" date="2024-03-28">
+      <description>
+        <p>This release updates the following components:</p>
+        <ul>
+          <li>GPRbuild - 24.0.0-1</li>
+          <li>Alire - 2.0.1</li>
+        </ul>
+        <p>This release also fixes a problem where Alire toolchain assistant could unexpectedly launch.</p>
+      </description>
+    </release>
     <release version="13.2.0-1+flatpak.1.0" date="2023-11-08">
       <description>
         <p>This release updates the following components:</p>
