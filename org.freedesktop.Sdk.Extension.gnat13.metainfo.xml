@@ -25,6 +25,20 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <releases>
+    <release version="13.2.0-2+flatpak.3.0" date="2024-10-29">
+      <description>
+        <p>This release updates the following components:</p>
+        <ul>
+          <li>GNAT: from 13.2.0-1 to 13.2.0-2</li>
+          <li>GPRbuild: from 24.0.0-1 to 24.0.0-2</li>
+          <li>Alire: from 2.0.1 to 2.0.2</li>
+        </ul>
+        <p>The following components are unchanged:</p>
+        <ul>
+          <li>GNATprove: 13.2.0-1</li>
+        </ul>
+      </description>
+    </release>
     <release version="13.2.0-1+flatpak.2.0" date="2024-03-28">
       <description>
         <p>This release updates the following components:</p>

@@ -3,18 +3,18 @@
   SPDX-License-Identifier: CC0-1.0
 -->
 
-# GNAT Ada Compiler as Freedesktop SDK Extension
+# Freedesktop SDK Ada Extension with GNAT 13
 
-This folder contains necessary files to repack an GNAT-based Ada development environment into an extention to the `org.freedesktop.Sdk` Flatpak container.
+This folder contains necessary files to repack an GNAT-13-based Ada development environment into an extention to the `org.freedesktop.Sdk` Flatpak container image.
 
 ## Includes
 
-- GNAT-FSF (Ada/GCC)
-- GNATprove (SPARK)
-- GPRbuild
-- Alire (`alr`)
+- GNAT-FSF (Ada/GCC) 13.x
+- GNATprove (SPARK) 13.x
+- GPRbuild latest
+- Alire (`alr`) latest
 
-So far the manifest simply downloads pre-built binaries from [alire-project/GNAT-FSF-builds](https://github.com/alire-project/GNAT-FSF-builds/releases).
+So far the manifest simply downloads pre-built binaries from [alire-project/GNAT-FSF-builds](https://github.com/alire-project/GNAT-FSF-builds/releases) and [alire-project/alire](https://github.com/alire-project/alire).
 
 ## License
 
